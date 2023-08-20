@@ -5,6 +5,8 @@
 }
 
 #container {
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
     width: 100%;
     height: 100%;
@@ -46,7 +48,8 @@
     text-decoration: none;
     margin: 0px 3vw;
 }
-#newsletterBtn{
+
+#newsletterBtn {
     background-color: #007bff;
     color: white;
     border: none;
@@ -55,9 +58,10 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .intro-pic {
     background-image: url('./Images/Image1.jpeg');
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -66,7 +70,8 @@
     justify-content: center;
     text-align: center;
 }
-.intro-text{
+
+.intro-text {
     height: auto;
     width: auto;
     background-color: rgba(0, 0, 0, 0.4);
@@ -78,18 +83,23 @@
     transform: scale(0);
     animation: appear 1s forwards;
 }
+
 @keyframes appear {
     0% {
-        transform: rotate3d( 1, 1, 1, 180deg) scale(0.2);
+        transform: rotate3d(1, 1, 1, 180deg) scale(0.2);
     }
+
     50% {
-        transform: rotate3d( 1, 1, 1, -180deg) scale(0.6);
+        transform: rotate3d(1, 1, 1, -180deg) scale(0.6);
     }
+
     100% {
         transform: scale(1);
     }
 }
-.images-container{
+
+.images-container {
+    height: 100vh;
     margin: 2vh 3vw;
     border-radius: 5%;
     background-color: rgba(230, 227, 227, 0.877);
@@ -99,11 +109,39 @@
     align-items: center;
     padding: 2vh 3vw;
 }
-.dis-image img{
-    margin: 2vh 3vw;
-    width: 300px;
-    height: 250px;
+
+.dis-image img {
+    width: 27vw;
+    height: 45vh;
 }
+
+.performance-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+.performance {
+    height: 100vh;
+    margin: 2vh 3vw;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.performance-box img {
+    border-radius: 5%;
+    width: 40vw;
+    height: 40vh;
+}
+
 .overlay {
     display: none;
     position: fixed;
