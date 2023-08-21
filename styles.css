@@ -181,20 +181,29 @@
     background-color: #f2f2f2;
 }
 
-@media (min-width: 901px) {
-    .specs {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .specs table {
-        width: calc(50% - 10px);
-    }
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2vh 3vw;
+    text-align: center;
 }
 
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
 
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
+.footer a:hover {
+    color: #007bff;
+}
 
 
 
