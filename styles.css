@@ -182,30 +182,97 @@
 }
 
 
-
+.footer-shell{
+    width: 100vw;
+    background-color: #333;
+}
 .footer {
     background-color: #333;
     color: white;
     padding: 2vh 3vw;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer p {
-    margin: 0;
-    font-size: 14px;
+.contact-form {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 1vh;
 }
 
-.footer a {
+.contact-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+.social-media ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.social-media a {
     color: white;
     text-decoration: none;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
 
-.footer a:hover {
+.social-media a:hover {
     color: #007bff;
 }
-
-
+.copyright{
+    text-align: center;
+    padding: 1vh 3vw;
+    background-color: #333;
+    color: white;
+    width: 100vw;
+    height: 5vh;
+}
+.copyright a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
 
 
 
