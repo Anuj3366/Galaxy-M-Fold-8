@@ -9,6 +9,7 @@
       {
         "duplicate-id-aria": "off"
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
