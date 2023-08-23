@@ -7,9 +7,11 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: black;
 }
+
 #container {
     overflow-x: hidden;
     overflow-y: auto;
@@ -29,10 +31,21 @@ body{
     background-color: white;
     box-shadow: 5px 5px 10px rgba(206, 36, 36, 0.521);
     text-shadow: 2px 2px 5px rgba(206, 36, 36, 0.521);
-    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .logo-text {
@@ -61,8 +74,67 @@ body{
 
 #nav-links ul li a:hover {
     transform: scale(1.1);
-    text-shadow:5px 5px 6px rgba(206, 36, 36, 0.521);
+    text-shadow: 5px 5px 6px rgba(206, 36, 36, 0.521);
 
+}
+
+@media screen and (min-width: 700px) {
+    #menu-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #nav-links-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgba(206, 36, 36, 0.521);
+        text-shadow: 2px 2px 5px rgba(206, 36, 36, 0.521);
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+        transition: 0.3s;
+    }
+
+    #nav-links-container.active {
+        display: block;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #nav-links ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #nav-links ul li {
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
+        margin: 10px 0;
+        height: 20vh;
+        padding: 9vh;
+    }
+
+    #nav-links ul li a {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: 0.3s;
+    }
+
+    #nav-links ul li a:hover {
+        transform: scale(1.1);
+        text-shadow: 5px 5px 6px rgba(206, 36, 36, 0.521);
+    }
 }
 
 #newsletterBtn {
@@ -73,6 +145,14 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+#newsletterBtn:hover,
+#newsletterBtn:focus {
+    background-color: #dfdfdf;
+    text-decoration: none;
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
 }
 
 .overlay {
@@ -86,6 +166,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100000;
 }
 
 .popup {
@@ -112,7 +193,7 @@ body{
     margin-bottom: 5px;
 }
 
-.popup input[type="email"] {
+.popup input {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -136,6 +217,28 @@ body{
     color: white;
 }
 
+@media screen and (max-width: 700px) {
+    #newsletterBtn {
+        padding: 5px;
+    }
+
+    .popup {
+        width: 250px;
+    }
+
+    .popup h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup input {
+        padding: 5px;
+    }
+
+    .popup button {
+        padding: 5px;
+    }
+}
+
 /* Introduction Page */
 
 .intro-pic {
@@ -148,6 +251,8 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .intro-text {
@@ -260,10 +365,11 @@ body{
 }
 
 
-.footer-shell{
+.footer-shell {
     width: 100vw;
     background-color: #333;
 }
+
 .footer {
     background-color: #333;
     color: white;
@@ -321,12 +427,14 @@ body{
     display: flex;
     gap: 1rem;
 }
-.social-media ul{
+
+.social-media ul {
     text-decoration: none;
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
+
 .social-media a {
     color: white;
     text-decoration: none;
@@ -337,7 +445,8 @@ body{
 .social-media a:hover {
     color: #007bff;
 }
-.copyright{
+
+.copyright {
     text-align: center;
     padding: 1vh 3vw;
     background-color: #333;
@@ -345,7 +454,8 @@ body{
     width: 100vw;
     height: 5vh;
 }
-.copyright a{
+
+.copyright a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
