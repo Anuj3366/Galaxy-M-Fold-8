@@ -155,7 +155,7 @@ body {
 #newsletterBtn:focus {
     background-color: #dfdfdf;
     text-decoration: none;
-    transform: scale(1.1);
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.521);
     color: rgb(0, 0, 0);
 }
 
@@ -349,18 +349,23 @@ body {
 }
 
 
-
+.heading{
+    margin: auto;
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+}
 .specs {
     height: 100vh;
     margin: 4vh 3vw;
-    border-radius: 5%;
     background-color: rgba(230, 227, 227, 0.877);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
     padding: 5px;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .specs table {
@@ -403,12 +408,9 @@ body {
 .contact-form {
     width: 400px;
     height: 200px;
-    margin-bottom: 1vh;
-}
+    margin-bottom: 50px;
+    overflow: visible;
 
-.contact-form h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
 }
 
 .contact-form form {
@@ -427,6 +429,7 @@ body {
     margin-bottom: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
 }
 
 .contact-form button {
@@ -455,6 +458,13 @@ body {
     justify-content: space-between;
 }
 
+.social-media img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
 .social-media a {
     color: white;
     text-decoration: none;
@@ -480,4 +490,18 @@ body {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+}
+@media screen and (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        padding: 2vh 1vw;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
 }
