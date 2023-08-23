@@ -6,15 +6,17 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 body {
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: black;
 }
 
 #container {
     overflow-x: hidden;
-    overflow-y: auto;
     position: relative;
     width: 100%;
     height: 100%;
@@ -85,7 +87,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-
+    * {
+        overflow-y: unset;
+    }
     #nav-links-container {
         position: absolute;
         top: 100%;
@@ -246,7 +250,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +287,7 @@ body {
 }
 
 .images-container {
-    height: 100vh;
+    height: auto;
     margin: 2vh 3vw;
     border-radius: 5%;
     background-color: rgba(230, 227, 227, 0.877);
@@ -295,8 +299,19 @@ body {
 }
 
 .dis-image img {
-    width: 27vw;
+    margin: 20px;
+    width: 25vw;
     height: 45vh;
+    min-width: 300px;
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
+}
+
+.dis-image img:hover , .dis-image img:active {
+    border-radius: 10%;
+    transform: scale(1.09);
+    filter: grayscale(0%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .performance-img {
@@ -307,12 +322,12 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
 }
 
+
+
 .performance {
-    height: 100vh;
+    height: auto;
     margin: 2vh 3vw;
     border-radius: 5%;
     position: relative;
@@ -323,9 +338,14 @@ body {
 }
 
 .performance-box img {
+    min-width: 340px;
     border-radius: 5%;
     width: 40vw;
     height: 40vh;
+}
+.performance img:hover{
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -339,7 +359,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 2vh 3vw;
+    padding: 5px;
     overflow: scroll;
 }
 

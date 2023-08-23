@@ -28,13 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function showMenu() {
     console.log("Menu button clicked");
     const navLinksContainer = document.getElementById('nav-links-container');
-    const body = document.body;
 
     if (navLinksContainer.classList.contains('active')) {
         navLinksContainer.classList.remove('active');
-        body.style.overflow = 'auto'; // Re-enable scrolling
     } else {
         navLinksContainer.classList.add('active');
-        body.style.overflow = 'hidden'; // Disable scrolling
     }
 }
