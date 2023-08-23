@@ -5,7 +5,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+body{
+    background-color: black;
+}
 #container {
     overflow-x: hidden;
     overflow-y: auto;
