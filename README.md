@@ -50,4 +50,4 @@ This project was made and designed by Anuj Garg and He holds all the rights to i
 
 
 Enjoy exploring your Galaxy Z Fold 6 and make the most out of this exciting device!
-[Link to Galaxy Z Fold 6 on Samsung's website](https://www.samsung.com/global/galaxy/galaxy-z-fold3/)
+[Link to Galaxy Z Fold 6 on Samsung's website](https://anuj3366.github.io/Galaxy-Z-Fold-6/)
