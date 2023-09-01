@@ -1,7 +1,7 @@
 # Galaxy Z Fold 6
 
 
-![Project Image](images/galaxy-fold.jpg)
+![Project Image](Images/Image.jpeg)
 
 ## Table of Contents
 
